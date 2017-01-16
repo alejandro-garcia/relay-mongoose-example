@@ -1,4 +1,5 @@
-import User from './components/User.js';
+//import User from './components/User.js';
+import Ranks from './components/RankList.js';
 import AppHomeRoute from './routes/AppHomeRoute';
 import ReactDOM from 'react-dom';
 import Relay from 'react-relay';
@@ -8,9 +9,10 @@ let userId = getQueryParams(document.location.search).user || "5874ac252827ff2f6
 
 ReactDOM.render(
   <Relay.RootContainer
-    Component={User}
+    Component={Ranks}
     //TODO Update userId
-    route={new AppHomeRoute({userId: userId})}
+    //route={new AppHomeRoute({userId: userId})}
+    route={new AppHomeRoute()}
   />,
   document.getElementById('root')
 );

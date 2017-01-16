@@ -1,16 +1,25 @@
 import Relay from 'react-relay';
 class AppHomeRoute extends Relay.Route {
+  // static queries = {
+  //   user: (Component) => Relay.QL `
+  //     query {
+  //       user (id: $userId) {
+  //         ${Component.getFragment('user')}
+  //       }
+  //     }
+  //   `
+  // };
   static queries = {
-    user: (Component) => Relay.QL `
+    ranks: (Component) => Relay.QL `
       query {
-        user (id: $userId) {
-          ${Component.getFragment('user')}
+        ranks {
+          ${Component.getFragment('rank')}
         }
       }
     `
   };
 
-  static paramDefinitions = {userId: {required: true}};
+  //static paramDefinitions = {userId: {required: true}};
   static routeName = 'AppHomeRoute';
 }
 

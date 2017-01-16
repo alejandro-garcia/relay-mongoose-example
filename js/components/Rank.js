@@ -8,6 +8,7 @@ import React from 'react';
    */
 class Rank extends React.Component {
   render() {
+    debugger;
     let rank = this.props.rank;
     return (
       <tr>
